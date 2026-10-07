@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CampusCore - College Management Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+<section id="loginPage" class="login-page">
+<div class="login-container">
+<div class="logo">CC</div>
+<h1>Welcome to CampusCore</h1>
+<p class="subtitle">College Management Portal</p>
+
+<div class="role-tabs">
+<button class="role-btn active" data-role="admin">Admin</button>
+<button class="role-btn" data-role="faculty">Faculty</button>
+<button class="role-btn" data-role="student">Student</button>
+</div>
+
+<form id="loginForm" class="login-card">
+<label id="loginLabel">Admin Email ID</label>
+<input type="text" id="loginIdentity" placeholder="Enter Admin Email ID">
+
+<div id="passwordContainer">
+<label>Password</label>
+<input type="password" id="loginPassword" placeholder="Enter Password">
+</div>
+
+<button type="submit" class="login-button">Login</button>
+</form>
+
+<p class="login-footer">CampusCore • College Management Portal</p>
+</div>
+</section>
+<section id="adminPage" class="portal hidden">
+<aside class="sidebar">
+
+<div class="sidebar-brand">
+<div class="sidebar-logo">CC</div>
+<div><strong>CampusCore</strong><small>Admin Portal</small></div>
+</div>
+
+<nav>
+<button class="sidebar-link active" data-admin-section="dashboard">⌂ Dashboard</button>
+<button class="sidebar-link" data-admin-section="faculty">◉ Manage Faculty</button>
+<button class="sidebar-link" data-admin-section="student">◎ Manage Student</button>
+<button class="sidebar-link" data-admin-section="notice">▤ Notice</button>
+<button class="sidebar-link logout-link" id="adminLogout">↪ Logout</button>
+</nav>
+
+</aside>
+
+<main class="main-area">
+<header class="topbar">
+<div class="topbar-left">
+<button class="mobile-menu" id="mobileMenu">☰</button>
+College Management Portal
+</div>
+<div class="topbar-right"><div class="top-logo">CC</div>CampusCore</div>
+</header>
+<div id="adminContent"></div>
+</main>
+</section>
+
+
+<section id="facultyPage" class="portal hidden">
+<main class="full-area">
+
+<header class="topbar">
+<div class="topbar-left">
+<button class="notification-button" id="facultyNotification">🔔</button>
+<span id="facultyHeaderId"></span>
+</div>
+<div class="topbar-right">
+<div class="top-logo">CC</div>CampusCore
+<button class="header-logout" id="facultyLogout">Logout</button>
+</div>
+</header>
+
+<div id="facultyContent"></div>
+</main>
+</section>
+
+
+<section id="studentPage" class="portal hidden">
+<main class="full-area">
+
+<header class="topbar">
+<div class="topbar-left">
+<button class="notification-button" id="studentNotification">🔔</button>
+<span id="studentHeaderId"></span>
+</div>
+<div class="topbar-right">
+<div class="top-logo">CC</div>CampusCore
+<button class="header-logout" id="studentLogout">Logout</button>
+</div>
+</header>
+
+<div id="studentContent"></div>
+</main>
+</section>
+
+
+<div id="modal" class="modal hidden">
+<div class="modal-card">
+<button class="modal-close" id="modalClose">×</button>
+<div id="modalBody"></div>
+</div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
